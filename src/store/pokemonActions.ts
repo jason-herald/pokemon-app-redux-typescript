@@ -1,8 +1,8 @@
 export const setPokemonList = (
-  pokemonList: any[]
+  pokemon: any[]
 ): { type: string; payload: any[] } => {
   return {
     type: "SET_POKEMON_LIST",
-    payload: pokemonList,
+    payload: pokemon,
   };
 };

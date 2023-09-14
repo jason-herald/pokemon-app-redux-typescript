@@ -20,10 +20,12 @@ function ProductListingPage() {
           return { ...pokemon, details };
         })
       );
-      dispatch(setPokemonList(pokemonWithDetails ));
+      console.log(pokemonWithDetails);
+      dispatch(setPokemonList(pokemonWithDetails));
     }
     fetchData();
   }, [dispatch]);
+  console.log("value", pokemonDetails);
   return (
     <div className="pokemon-list-container">
       <h1>Pokémon List</h1>
