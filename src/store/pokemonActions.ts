@@ -1,6 +1,8 @@
+import { Pokemon } from "../interfaces";
 export const setPokemonList = (
-  pokemon: any[]
-): { type: string; payload: any[] } => {
+  pokemon: Pokemon[]
+): { type: string; payload: Pokemon[] } => {
+  console.log(pokemon);
   return {
     type: "SET_POKEMON_LIST",
     payload: pokemon,

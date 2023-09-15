@@ -1,11 +1,12 @@
 import "./ProductDescriptionPage.css";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Pokemon } from "../../interfaces";
 
 const IMAGE_URL: string = import.meta.env.VITE_IMAGE_URL;
 
 function ProductDescriptionPage() {
-  const pokemonDetails: any = useSelector((state: { pokemon: [] }) => state.pokemon);
+  const pokemonDetails: Pokemon[] = useSelector((state: { pokemon: [] }) => state.pokemon);
   const { pokemonName } = useParams();
   const pokemon = pokemonDetails?.find(
     (pokemon: { name: string }) => pokemon.name === pokemonName
